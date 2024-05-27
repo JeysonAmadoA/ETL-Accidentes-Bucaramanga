@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34601.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Accidentes_bucaramanga", "Accidentes_bucaramanga.dtproj", "{4644CF0F-283B-4337-9C18-83D851263250}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4644CF0F-283B-4337-9C18-83D851263250}.Development|Default.ActiveCfg = Development
+		{4644CF0F-283B-4337-9C18-83D851263250}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EF92F2D-5659-4077-BD8D-FB83E449FD9B}
+	EndGlobalSection
+EndGlobal

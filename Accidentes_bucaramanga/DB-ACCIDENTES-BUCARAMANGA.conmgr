@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DB-ACCIDENTES-BUCARAMANGA"
+  DTS:DTSID="{24B96A4D-57BD-4B46-882D-88BF58E0DAF9}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-DUOEMF2\SQLSERVER;Initial Catalog=accidentes_bucaramanga;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{24B96A4D-57BD-4B46-882D-88BF58E0DAF9}DESKTOP-DUOEMF2\SQLSERVER.accidentes_bucaramanga;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
