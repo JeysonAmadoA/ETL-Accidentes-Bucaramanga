@@ -2,18 +2,48 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Accidentes_bucaramanga</Name>
-    <LastWriteTime>2024-05-28T00:00:50.7545747Z</LastWriteTime>
+    <LastWriteTime>2024-05-28T03:12:26.0878027Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>ETL Main table.dtsx</Name>
-      <LastWriteTime>2024-05-28T00:31:24.0202814Z</LastWriteTime>
+      <LastWriteTime>2024-05-28T00:45:13.0069859Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ETL Domain-tables.dtsx</Name>
-      <LastWriteTime>2024-05-27T23:54:24.6722146Z</LastWriteTime>
+      <LastWriteTime>2024-05-28T00:49:03.5778101Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL Dim_vehiculo.dtsx</Name>
+      <LastWriteTime>2024-05-28T02:46:40.5535024Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL Dim_ips.dtsx</Name>
+      <LastWriteTime>2024-05-28T02:53:31.0062049Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL Dim_rips.dtsx</Name>
+      <LastWriteTime>2024-05-28T02:59:28.4803343Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL Dim_relacion_usuario.dtsx</Name>
+      <LastWriteTime>2024-05-28T03:03:57.1863622Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL Dim_eps.dtsx</Name>
+      <LastWriteTime>2024-05-28T03:08:01.3616067Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL Dim_tipo_afiliacion.dtsx</Name>
+      <LastWriteTime>2024-05-28T03:12:26.0478134Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

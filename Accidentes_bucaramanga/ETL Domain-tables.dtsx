@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{493CE3AF-89F7-4504-87DC-48E0E8ADFF08}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{4BE90C06-921D-4651-9A05-6E213DE7783C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,19 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Jeyson\UPTC\Especialización\Trabajo dirigido\ETL-Accidentes-Bucaramanga\source\DataTransformada_hospital_21-05-2024_Final.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Jeyson\UPTC\Especialización\Trabajo dirigido\ETL-Accidentes-Bucaramanga\source\DataTransformada_hospital_21-05-2024_Final.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{83622B9C-1A85-40ED-BAEE-75C4904F3F36}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Especialización en bases de datos\SEGUNDO SEMESTRE\Trabajo dirigido\ETL-Accidentes-Bucaramanga-master\source\DataTransformada_hospital_21-05-2024_Final.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1231,8 +1243,8 @@
               <connections>
                 <connection
                   refId="Package\INSERT DATA_RAW\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Datos transformados]"
-                  connectionManagerRefId="Package.ConnectionManagers[Datos transformados]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2070,7 +2082,7 @@
                     <externalMetadataColumn
                       refId="Package\INSERT DATA_RAW\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EPS_USUARIO]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="EPS_USUARIO" />
                     <externalMetadataColumn
                       refId="Package\INSERT DATA_RAW\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONDICION_EGRESO]"

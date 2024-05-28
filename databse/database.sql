@@ -107,3 +107,109 @@ CREATE TABLE registro_accidentes (
     dia_semana NVARCHAR(50) NOT NULL,
     rips_id VARCHAR(50) NOT NULL,
 );
+
+-- CREACIÓN DE DIMENSIONES
+
+-- Creación de tabla: dimensión vehículo
+
+CREATE TABLE [dbo].[TBL_DIM_VEHICULO](
+[SK_DIM_VEHICULO] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_VEHICULO] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión ips
+
+CREATE TABLE [dbo].[TBL_DIM_IPS](
+[SK_DIM_IPS] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_IPS] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión rips
+
+CREATE TABLE [dbo].[TBL_DIM_RIPS](
+[SK_DIM_RIPS] [int] IDENTITY(1,1) NOT NULL,
+[DESCRIPCION_RIPS] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión relación usuario
+
+CREATE TABLE [dbo].[TBL_DIM_RELACION_USUARIO](
+[SK_DIM_RELACION] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_RELACION] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión eps
+
+CREATE TABLE [dbo].[TBL_DIM_EPS](
+[SK_DIM_EPS] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_EPS] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión tipo afiliación
+
+CREATE TABLE [dbo].[TBL_DIM_AFILIACION](
+[SK_DIM_AFILIACION] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_AFILIACION] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- CONSULTAS PARA INGESTAR LAS DIMENSIONES
+
+-- Consulta para ingestar la dimensión de tipo de vehículo
+
+SELECT DISTINCT(TIPO_DE_VEHICULO) AS TIPO_VEHICULO FROM [ACCIDENTES_BUCARAMANGA].[dbo].[ACCIDENTES_RAW]
+ORDER BY 1;
+
+-- Consulta para verificar la ingesta en la tabla de dimensión vehículo
+
+SELECT SK_DIM_VEHICULO, NOMBRE_VEHICULO FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_VEHICULO]
+
+-- Consulta para ingestar la dimensión de ips
+
+SELECT DISTINCT(IPS) AS IPS FROM [ACCIDENTES_BUCARAMANGA].[dbo].[ACCIDENTES_RAW]
+ORDER BY 1;
+
+-- Consulta para verificar la ingesta en la tabla de dimensión ips
+
+SELECT SK_DIM_IPS, NOMBRE_IPS FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_IPS]
+
+-- Consulta para ingestar la dimensión de rips
+
+SELECT DISTINCT(DESCRIPCION_RIPS) AS DESCRIPCION_RIPS FROM [ACCIDENTES_BUCARAMANGA].[dbo].[ACCIDENTES_RAW]
+ORDER BY 1;
+
+-- Consulta para verificar la ingesta en la tabla de dimensión rips
+
+SELECT SK_DIM_RIPS, DESCRIPCION_RIPS FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_RIPS]
+
+-- Consulta para ingestar la dimensión de relación usuario
+
+SELECT DISTINCT(TIPO_ACTOR_VIAL) AS TIPO_ACTOR_VIAL FROM [ACCIDENTES_BUCARAMANGA].[dbo].[ACCIDENTES_RAW]
+ORDER BY 1;
+
+-- Consulta para verificar la ingesta en la tabla de dimensión relación usuario
+
+SELECT SK_DIM_RELACION, NOMBRE_RELACION FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_RELACION_USUARIO]
+
+-- Consulta para ingestar la dimensión de tipo de eps
+
+SELECT DISTINCT(EPS_USUARIO) AS EPS_USUARIO FROM [ACCIDENTES_BUCARAMANGA].[dbo].[ACCIDENTES_RAW]
+ORDER BY 1;
+
+-- Consulta para verificar la ingesta en la tabla de dimensión eps
+
+SELECT SK_DIM_EPS, NOMBRE_EPS FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_EPS]
+
+-- Consulta para ingestar la dimensión de afiliación
+
+SELECT DISTINCT(TIPO_AFILIACION) AS TIPO_AFILIACION FROM [ACCIDENTES_BUCARAMANGA].[dbo].[ACCIDENTES_RAW]
+ORDER BY 1;
+
+-- Consulta para verificar la ingesta en la tabla de dimensión afiliación
+
+SELECT SK_DIM_AFILIACION, NOMBRE_AFILIACION FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_AFILIACION]
