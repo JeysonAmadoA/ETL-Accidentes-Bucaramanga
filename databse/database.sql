@@ -107,3 +107,18 @@ CREATE TABLE registro_accidentes (
     dia_semana NVARCHAR(50) NOT NULL,
     rips_id VARCHAR(50) NOT NULL,
 );
+
+
+-- Crear tabla: DIMENSIONES
+
+CREATE TABLE DIM_TIEMPO (
+    SK_DIM_TIEMPO bigint NOT NULL,
+    DT_FECHA datetime NULL,
+    NUM_ANIO int NULL,
+    STR_SEMESTRE varchar(20) NULL,
+    NUM_PERIODO int NULL,
+    STR_MES varchar(20) NULL,
+    NUM_MES int NULL,
+    NUM_DIA int NULL,
+    NUM_SEMANA_MES int NULL
+);
