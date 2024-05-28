@@ -110,6 +110,7 @@ CREATE TABLE registro_accidentes (
 
 -- CREACIÓN DE DIMENSIONES
 
+<<<<<<< Updated upstream
 -- Creación de tabla: dimensión vehículo
 
 CREATE TABLE [dbo].[TBL_DIM_VEHICULO](
@@ -157,6 +158,99 @@ CREATE TABLE [dbo].[TBL_DIM_AFILIACION](
 [NOMBRE_AFILIACION] [nvarchar](255) NULL,
 [DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
 );
+=======
+-- CREACIÓN DE DIMENSIONES
+
+-- Creación de tabla: dimensión vehículo
+
+CREATE TABLE [dbo].[TBL_DIM_VEHICULO](
+[SK_DIM_VEHICULO] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_VEHICULO] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión ips
+
+CREATE TABLE [dbo].[TBL_DIM_IPS](
+[SK_DIM_IPS] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_IPS] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión rips
+
+CREATE TABLE [dbo].[TBL_DIM_RIPS](
+[SK_DIM_RIPS] [int] IDENTITY(1,1) NOT NULL,
+[DESCRIPCION_RIPS] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión relación usuario
+
+CREATE TABLE [dbo].[TBL_DIM_RELACION_USUARIO](
+[SK_DIM_RELACION] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_RELACION] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión eps
+
+CREATE TABLE [dbo].[TBL_DIM_EPS](
+[SK_DIM_EPS] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_EPS] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión tipo afiliación
+
+CREATE TABLE [dbo].[TBL_DIM_AFILIACION](
+[SK_DIM_AFILIACION] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_AFILIACION] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: dimensión tiempo
+
+CREATE TABLE DIM_TIEMPO (
+    SK_DIM_TIEMPO bigint NOT NULL,
+    DT_FECHA datetime NULL,
+    NUM_ANIO int NULL,
+    STR_SEMESTRE varchar(20) NULL,
+    NUM_PERIODO int NULL,
+    STR_MES varchar(20) NULL,
+    NUM_MES int NULL,
+    NUM_DIA int NULL,
+    NUM_SEMANA_MES int NULL
+);
+
+-- Creación de tabla: dimensión curso de vida
+
+CREATE TABLE [dbo].[TBL_DIM_CURSO_DE_VIDA](
+[SK_DIM_CURSO_DE_VIDA] [int] IDENTITY(1,1) NOT NULL,
+[NOMBRE_CURSO_DE_VIDA] [nvarchar](255) NULL,
+[DT_FECHA_ACTUALIZACION] [datetime] DEFAULT GETDATE()
+);
+
+-- Creación de tabla: fact table
+
+CREATE TABLE [dbo].[TBL_FACT_HOSPITAL](
+[SK_DIM_TIEMPO] [int],
+[SK_DIM_VEHICULO] [int],
+[SK_DIM_IPS] [int],
+[SK_DIM_RIPS] [int],
+[SK_DIM_RELACION] [int],
+[SK_DIM_EPS] [int],
+[SK_DIM_AFILIACION] [int],
+[SK_DIM_CURSO_DE_VIDA] [int],
+INT_CANTIDAD_ACCIDENTES INT,
+INT_CANTIDAD_POLITRAUMATISMO INT,
+INT_CANTIDAD_REQUIERE_CIRUGIA INT,
+DOUBLE_COSTOS DECIMAL(18, 2),
+[DT_FECHA_ACTUALIZACION] [datetime]
+);
+
+select * from DIM_TIEMPO;
+>>>>>>> Stashed changes
 
 -- CONSULTAS PARA INGESTAR LAS DIMENSIONES
 
@@ -213,3 +307,15 @@ ORDER BY 1;
 -- Consulta para verificar la ingesta en la tabla de dimensión afiliación
 
 SELECT SK_DIM_AFILIACION, NOMBRE_AFILIACION FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_AFILIACION]
+<<<<<<< Updated upstream
+=======
+
+-- Consulta para ingestar la dimensión de curso de vida
+
+SELECT DISTINCT(CURSO_DE_VIDA) AS CURSO_DE_VIDA FROM [ACCIDENTES_BUCARAMANGA].[dbo].[ACCIDENTES_RAW]
+ORDER BY 1;
+
+-- Consulta para verificar la ingesta en la tabla de dimensión curso de vida
+
+SELECT SK_DIM_CURSO_DE_VIDA, NOMBRE_CURSO_DE_VIDA FROM [ACCIDENTES_BUCARAMANGA].[dbo].[TBL_DIM_CURSO_DE_VIDA]
+>>>>>>> Stashed changes
