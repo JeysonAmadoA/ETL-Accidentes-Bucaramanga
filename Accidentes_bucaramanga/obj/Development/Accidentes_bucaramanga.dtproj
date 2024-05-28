@@ -26,12 +26,12 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-DUOEMF2</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnelkaZcKq0CwXbgVb8KSkQAAAAACAAAAAAAQZgAAAAEAACAAAAB16rv7bYyTb2gpNW1gHw98pqMH8cfqLeBZxuU+uh6qOQAAAAAOgAAAAAIAACAAAACcyRaFm2M4vR/MCNerYhXOHstfLSwFSPZO+44gckplBJAAAABM/vRvAKiMjYJ+nLW8Kt5fnMZkMxZ6f4J11qAw0yPuuOcviyxmSay3gxl4GVRwWPrWllIXxScEU2AG4RwubQtfaS0HZcj5vPwWa5kmB0o7F4cXvb2C0iFNPzWAThz8LXdeyPSKzY56VbiKbdBCbufn+msWdJQzeNBbb8gM78dV3rAq1qeepY5cnEv3nr3MfNdAAAAA/ZF+yxwJRsGzKfW3gzUkdvp946MZ6xBv0eT4avyl4rRqbqPmSBtY1ljsvTuVtcUvv/KkwnFAJ7sZ0G/FrUPFDg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnelkaZcKq0CwXbgVb8KSkQAAAAACAAAAAAAQZgAAAAEAACAAAABn5wBoIxfyCMfilVJXpy/PttfB14cXx6YwXvtY88CwzgAAAAAOgAAAAAIAACAAAAB2PzFdpUS8zjwioCDBa1GdJi2iP0q3sylaNO5a5fFW3ZAAAABfDbxRARBRFzAhOvlKWky+JOb3rGJK4nhZDV+9VgwaF/RHNyeVj+Aa0oKQ+NBXbLdBcj0hE7lGWCNq7xN8zEEasnrTnwPMRscRKlR0CUM/DwFnXzpf/EWoACls/x2ljHHJjcbgbHfc0LiAG7lW5jBti5rz64QCLvNnlgrk6HmHy3Uuj55KeFF+6epPv99P3A5AAAAAdGqttXmhOFZM0fJveG/8FtHl2uB7l2xsESctbhY/rzNfIKf078rMqvZ2Eap9b8hFoW5b0gHd07BF6pfOJHOpmA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="EL Domain-tables.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="ETL Main table.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Domain-tables.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="DB-ACCIDENTES-BUCARAMANGA.conmgr" />
@@ -188,7 +188,24 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="EL Domain-tables.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="ETL Main table.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E842BFED-B7D3-4B19-AE2C-BB78565E7235}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{53E1C8DD-90E8-4CB7-90D0-216DD3EB3341}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Domain-tables.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{29EA6B59-25E5-4A1B-AFBC-B7EFFD26AA1D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
@@ -337,23 +354,6 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="ETL Main table.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{E842BFED-B7D3-4B19-AE2C-BB78565E7235}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{53946576-F138-431F-A211-A1028085836B}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
