@@ -26,13 +26,21 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-DUOEMF2</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnelkaZcKq0CwXbgVb8KSkQAAAAACAAAAAAAQZgAAAAEAACAAAAAqO03OWfIB6yxgz74eXtnH4JiYmYHBoB08ie9EwhZPUgAAAAAOgAAAAAIAACAAAACbzWA9sKDlT8UF1VJSOepWCRMwSGkE41u3KwJ5FMvZR5AAAADrL1yrg9FZw9U3qcAWla06TbwvB7A5vtiiTAroyfd4ReJiiVjGHQEZQ5kfhPwrXaM6ZEjJn2UR+O9PzB427H3f+HKdAXkc6VD2RnisnYrBr+0aBPItkhrQEv4tCfb8lh/yjLu0pW3ucDijrKEkGVAbuW157IXIXrSCU6XzeLjT8/Yqiv7eLHBk3pn1ICnMQZ1AAAAAVFlTQgRdBRsMXgdPqD7csHnCorY0tVCwEVWiK+uTFRr5GkO90NAZb9j9O56wYKJfCdK4+fomSOt0U4Juy/mDwQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnelkaZcKq0CwXbgVb8KSkQAAAAACAAAAAAAQZgAAAAEAACAAAACdeYWWDgcVZdr7jan3r+zZ8+B+R/8TvBhHO44sAh749gAAAAAOgAAAAAIAACAAAAA8+tTriQcLDlN2fVAXj4aSMqwmOSocSgC2mUXzapMNu5AAAADSwUBHc/sVz7aCwqZgcmRn3CdCk2yd3UKYa/a9JdCp25N5U02yqcoRn4OkuI0qLmNP7YHoooKgUxmKxeSkdBGQ1l/UBFZ9ZKEq5AoIxDolxYFoN5ittJNSmaX+4/f5f3TC8F6yb4AD8s5+JgoMXO6wN0BfijXbc/r1kpTZR17JcgJIlFdE8r6r8hi+XudzykFAAAAA/jcGNzDy3uudGKQh5C17Jk3iMkcwLv8sFpMIFnh8PNCV5j03+IgP8aKXT3m6RmIejraTJFly7Xx7aGeuGhx+mw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="ETL Main table.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="ETL Domain-tables.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DIM_TIEMPO.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Dim_curso_de_vida.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Dim_eps.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Dim_ips.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Dim_relacion_usuario.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Dim_Rips.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Dim_tipo_afiliacion.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL Dim_vehiculo.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="FACT_HOSPITALES.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="DB-ACCIDENTES-BUCARAMANGA.conmgr" />
@@ -534,8 +542,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -570,6 +576,142 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Dim_curso_de_vida.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{0B33F53F-0C5D-4D47-8A4E-B89E9FEF8736}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ETL Dim_curso_de_vida</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B0B8476A-6341-4818-BEB1-3877A3E02EA9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Dim_eps.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{6EB647B6-F211-403B-92DC-C9CCA08A021A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ETL Dim_eps</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EC17D5A9-690A-45F4-A074-CB40866B32B0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Dim_ips.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{9CE04800-0BA7-448E-9C44-C8B6CC8CC622}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ETL Dim_ips</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4F16420B-61F6-40E8-B5C8-E067082C2B28}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Dim_relacion_usuario.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E0BADC34-22D0-4D5A-913C-516B862019F7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ETL Dim_relacion_usuario</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3BFF3BE7-3C52-4A6C-89BD-6792F131C6B8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Dim_Rips.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{BD890D78-DB14-474C-BE30-CA1055F06D03}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ETL Dim_rips</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F21A21C9-B465-404D-954B-F06491FF27FC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Dim_tipo_afiliacion.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{D55CAD32-6FDE-4703-B23B-7BC48B0766A3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ETL Dim_tipo_afiliacion</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F11971DF-7E17-45AD-8E37-245550E88539}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL Dim_vehiculo.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{2FA3E30A-DB8C-4E0A-BF74-7192393AE043}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{220C3FBD-80C1-461A-B104-B3A0F4818EEC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="FACT_HOSPITALES.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{679CAADD-6F13-4A73-B635-2E0455FDA7FE}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{09536D2C-BDE4-41FA-BC71-D5A8535C6B76}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

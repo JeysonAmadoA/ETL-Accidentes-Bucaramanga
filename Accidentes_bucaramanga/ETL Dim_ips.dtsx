@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-274FMMQ9"
   DTS:CreatorName="LAPTOP-274FMMQ9\Usuario"
-  DTS:DTSID="{631EF64E-DF14-4571-B0B2-97E81893168A}"
+  DTS:DTSID="{9CE04800-0BA7-448E-9C44-C8B6CC8CC622}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5035.3"
   DTS:LocaleID="9226"
   DTS:ObjectName="ETL Dim_ips"
   DTS:PackageType="5"
   DTS:VersionBuild="6"
-  DTS:VersionGUID="{A50527F9-DD8A-4D9E-92E4-88B8608CFA48}">
+  DTS:VersionGUID="{4F16420B-61F6-40E8-B5C8-E067082C2B28}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\DIM_IPS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{2FF2791B-AB50-444E-B0B4-FBB359D4277A}"
+      DTS:DTSID="{155EF14C-FA6F-4A97-BA46-7184BFB397AA}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DIM_IPS"

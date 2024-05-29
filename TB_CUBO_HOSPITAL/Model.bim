@@ -1,0 +1,515 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "es-CO",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "DESKTOP-DUOEMF2\\SQLSERVER",
+            "database": "accidentes_bucaramanga"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {},
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "kind": "SQL",
+          "path": "desktop-duoemf2\\sqlserver;accidentes_bucaramanga",
+          "Username": "UPTC",
+          "EncryptConnection": false
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "TBL_FACT_HOSPITAL",
+        "columns": [
+          {
+            "name": "SK_DIM_TIEMPO_ACCIDENTE",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_TIEMPO_ACCIDENTE"
+          },
+          {
+            "name": "SK_DIM_VEHICULO",
+            "dataType": "int64",
+            "sourceColumn": "SK_DIM_VEHICULO"
+          },
+          {
+            "name": "SK_DIM_IPS",
+            "dataType": "int64",
+            "sourceColumn": "SK_DIM_IPS"
+          },
+          {
+            "name": "SK_DIM_RIPS",
+            "dataType": "int64",
+            "sourceColumn": "SK_DIM_RIPS"
+          },
+          {
+            "name": "SK_DIM_RELACION",
+            "dataType": "int64",
+            "sourceColumn": "SK_DIM_RELACION"
+          },
+          {
+            "name": "SK_DIM_EPS",
+            "dataType": "int64",
+            "sourceColumn": "SK_DIM_EPS"
+          },
+          {
+            "name": "SK_DIM_AFILIACION",
+            "dataType": "int64",
+            "sourceColumn": "SK_DIM_AFILIACION"
+          },
+          {
+            "name": "SK_DIM_CURSO_DE_VIDA",
+            "dataType": "int64",
+            "sourceColumn": "SK_DIM_CURSO_DE_VIDA"
+          },
+          {
+            "name": "POLITRAUMATISMO",
+            "dataType": "boolean",
+            "sourceColumn": "POLITRAUMATISMO"
+          },
+          {
+            "name": "REQUIERE_CIRUGIA",
+            "dataType": "boolean",
+            "sourceColumn": "REQUIERE_CIRUGIA"
+          },
+          {
+            "name": "DOUBLE_COSTOS",
+            "dataType": "double",
+            "sourceColumn": "DOUBLE_COSTOS"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_FACT_HOSPITAL = Source{[Schema=\"dbo\",Item=\"TBL_FACT_HOSPITAL\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_FACT_HOSPITAL,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBL_DIM_AFILIACION",
+        "columns": [
+          {
+            "name": "SK_DIM_AFILIACION",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_AFILIACION"
+          },
+          {
+            "name": "NOMBRE_AFILIACION",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_AFILIACION"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_DIM_AFILIACION = Source{[Schema=\"dbo\",Item=\"TBL_DIM_AFILIACION\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_DIM_AFILIACION,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBL_DIM_CURSO_DE_VIDA",
+        "columns": [
+          {
+            "name": "SK_DIM_CURSO_DE_VIDA",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_CURSO_DE_VIDA"
+          },
+          {
+            "name": "NOMBRE_CURSO_DE_VIDA",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_CURSO_DE_VIDA"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_DIM_CURSO_DE_VIDA = Source{[Schema=\"dbo\",Item=\"TBL_DIM_CURSO_DE_VIDA\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_DIM_CURSO_DE_VIDA,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBL_DIM_IPS",
+        "columns": [
+          {
+            "name": "SK_DIM_IPS",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_IPS"
+          },
+          {
+            "name": "NOMBRE_IPS",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_IPS"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_DIM_IPS = Source{[Schema=\"dbo\",Item=\"TBL_DIM_IPS\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_DIM_IPS,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBL_DIM_EPS",
+        "columns": [
+          {
+            "name": "SK_DIM_EPS",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_EPS"
+          },
+          {
+            "name": "NOMBRE_EPS",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_EPS"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_DIM_EPS = Source{[Schema=\"dbo\",Item=\"TBL_DIM_EPS\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_DIM_EPS,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBL_DIM_RELACION_USUARIO",
+        "columns": [
+          {
+            "name": "SK_DIM_RELACION",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_RELACION"
+          },
+          {
+            "name": "NOMBRE_RELACION",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_RELACION"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_DIM_RELACION_USUARIO = Source{[Schema=\"dbo\",Item=\"TBL_DIM_RELACION_USUARIO\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_DIM_RELACION_USUARIO,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBL_DIM_RIPS",
+        "columns": [
+          {
+            "name": "SK_DIM_RIPS",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_RIPS"
+          },
+          {
+            "name": "DESCRIPCION_RIPS",
+            "dataType": "string",
+            "sourceColumn": "DESCRIPCION_RIPS"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_DIM_RIPS = Source{[Schema=\"dbo\",Item=\"TBL_DIM_RIPS\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_DIM_RIPS,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBL_DIM_VEHICULO",
+        "columns": [
+          {
+            "name": "SK_DIM_VEHICULO",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_VEHICULO"
+          },
+          {
+            "name": "NOMBRE_VEHICULO",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_VEHICULO"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_TBL_DIM_VEHICULO = Source{[Schema=\"dbo\",Item=\"TBL_DIM_VEHICULO\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_TBL_DIM_VEHICULO,{\"DT_FECHA_ACTUALIZACION\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DIM_TIEMPO",
+        "columns": [
+          {
+            "name": "SK_DIM_TIEMPO",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SK_DIM_TIEMPO"
+          },
+          {
+            "name": "DT_FECHA",
+            "dataType": "dateTime",
+            "sourceColumn": "DT_FECHA"
+          },
+          {
+            "name": "NUM_ANIO",
+            "dataType": "int64",
+            "sourceColumn": "NUM_ANIO"
+          },
+          {
+            "name": "STR_SEMESTRE",
+            "dataType": "string",
+            "sourceColumn": "STR_SEMESTRE"
+          },
+          {
+            "name": "NUM_PERIODO",
+            "dataType": "int64",
+            "sourceColumn": "NUM_PERIODO"
+          },
+          {
+            "name": "STR_MES",
+            "dataType": "string",
+            "sourceColumn": "STR_MES"
+          },
+          {
+            "name": "NUM_MES",
+            "dataType": "int64",
+            "sourceColumn": "NUM_MES"
+          },
+          {
+            "name": "NUM_DIA",
+            "dataType": "int64",
+            "sourceColumn": "NUM_DIA"
+          },
+          {
+            "name": "NUM_SEMANA_MES",
+            "dataType": "int64",
+            "sourceColumn": "NUM_SEMANA_MES"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/DESKTOP-DUOEMF2\\SQLSERVER;accidentes_bucaramanga\",",
+                "    dbo_DIM_TIEMPO = Source{[Schema=\"dbo\",Item=\"DIM_TIEMPO\"]}[Data]",
+                "in",
+                "    dbo_DIM_TIEMPO"
+              ]
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "TIEMPO",
+            "levels": [
+              {
+                "name": "ANIO",
+                "ordinal": 0,
+                "column": "NUM_ANIO"
+              },
+              {
+                "name": "SEMESTRE",
+                "ordinal": 1,
+                "column": "STR_SEMESTRE"
+              },
+              {
+                "name": "PERIODO",
+                "ordinal": 2,
+                "column": "NUM_PERIODO"
+              },
+              {
+                "name": "MES",
+                "ordinal": 3,
+                "column": "STR_MES"
+              },
+              {
+                "name": "SEMANA_MES",
+                "ordinal": 4,
+                "column": "NUM_SEMANA_MES"
+              },
+              {
+                "name": "DIA",
+                "ordinal": 5,
+                "column": "NUM_DIA"
+              },
+              {
+                "name": "FECHA",
+                "ordinal": 6,
+                "column": "DT_FECHA"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "3c5994f3-93f4-440c-a5c4-1f34928e0ce0",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_RELACION",
+        "toTable": "TBL_DIM_RELACION_USUARIO",
+        "toColumn": "SK_DIM_RELACION"
+      },
+      {
+        "name": "6441f91d-3a6c-466a-b930-fcd4487008d2",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_RIPS",
+        "toTable": "TBL_DIM_RIPS",
+        "toColumn": "SK_DIM_RIPS"
+      },
+      {
+        "name": "76e28f34-11b3-4464-b9ed-1cdc8ab6a4aa",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_IPS",
+        "toTable": "TBL_DIM_IPS",
+        "toColumn": "SK_DIM_IPS"
+      },
+      {
+        "name": "9988e070-c68f-4539-85d1-1d6667314e08",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_AFILIACION",
+        "toTable": "TBL_DIM_AFILIACION",
+        "toColumn": "SK_DIM_AFILIACION"
+      },
+      {
+        "name": "cb13ddd0-5dc7-4a6c-92da-474865063beb",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_CURSO_DE_VIDA",
+        "toTable": "TBL_DIM_CURSO_DE_VIDA",
+        "toColumn": "SK_DIM_CURSO_DE_VIDA"
+      },
+      {
+        "name": "f1fcd117-6a99-4145-b526-5356a85fa867",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_EPS",
+        "toTable": "TBL_DIM_EPS",
+        "toColumn": "SK_DIM_EPS"
+      },
+      {
+        "name": "beef7574-568f-4ad2-8388-c457d4c571ff",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_VEHICULO",
+        "toTable": "TBL_DIM_VEHICULO",
+        "toColumn": "SK_DIM_VEHICULO"
+      },
+      {
+        "name": "0152c951-3094-4b24-a066-47b368568ac7",
+        "fromTable": "TBL_FACT_HOSPITAL",
+        "fromColumn": "SK_DIM_TIEMPO_ACCIDENTE",
+        "toTable": "DIM_TIEMPO",
+        "toColumn": "SK_DIM_TIEMPO"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

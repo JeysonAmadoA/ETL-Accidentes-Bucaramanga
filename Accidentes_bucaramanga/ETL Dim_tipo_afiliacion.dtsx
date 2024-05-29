@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-274FMMQ9"
   DTS:CreatorName="LAPTOP-274FMMQ9\Usuario"
-  DTS:DTSID="{C64FD2E3-80B6-4FFE-8868-9FC7DE73D99A}"
+  DTS:DTSID="{D55CAD32-6FDE-4703-B23B-7BC48B0766A3}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5035.3"
   DTS:LocaleID="9226"
   DTS:ObjectName="ETL Dim_tipo_afiliacion"
   DTS:PackageType="5"
   DTS:VersionBuild="14"
-  DTS:VersionGUID="{300D5A3F-2E7B-4631-9CFB-2C640B4C9D72}">
+  DTS:VersionGUID="{F11971DF-7E17-45AD-8E37-245550E88539}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\DIM_TIPO_AFILIACION"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{40281983-025E-48E9-99BD-AB13DAA9250E}"
+      DTS:DTSID="{F194766F-5032-40EF-A2AA-522692BFA8C6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DIM_TIPO_AFILIACION"
